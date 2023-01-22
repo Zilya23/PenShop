@@ -43,12 +43,9 @@ namespace ProductShop
 
         private void prod_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //if(user.RoleId != 3 & user.RoleId != 2)
-            //{
                 var n = (sender as ListView).SelectedItem as DateBasee.Product;
 
                 NavigationService.Navigate(new RedactionPage(n));
-            //}
         }
 
         private void btn_add_Click(object sender, RoutedEventArgs e)

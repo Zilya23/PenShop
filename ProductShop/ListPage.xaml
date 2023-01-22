@@ -4,11 +4,53 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ProductShop"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ListPage">
 
-    <Grid>
+    <materialDesign:DialogHost DialogTheme="Inherit"
+                             Identifier="RootDialog"
+                             SnackbarMessageQueue="{Binding ElementName=MainSnackbar, Path=MessageQueue}">
+        <materialDesign:DrawerHost IsLeftDrawerOpen="{Binding ElementName=MenuToggleButton, Path=IsChecked}">
+            <materialDesign:DrawerHost.LeftDrawerContent>
+                <DockPanel MinWidth="350">
+                    <StackPanel>
+                        <TextBlock Text="Меню"
+                               HorizontalAlignment="Center"
+                               FontSize="30"
+                               Margin="10"/>
+                        <Button x:Name="btnMainApplication"
+                                Content="Главная страница"
+                                HorizontalAlignment="Center"
+                                FontSize="30"
+                                Height="50"
+                                Width="300"
+                                Margin="10"/>
+                        <Button x:Name="btnAddApplication"
+                                Content="Что-то еще"
+                                HorizontalAlignment="Center"
+                                FontSize="30"
+                                Height="50"
+                                Width="300"
+                                Margin="10"/>
+                    </StackPanel>
+                </DockPanel>
+            </materialDesign:DrawerHost.LeftDrawerContent>
+
+            <DockPanel>
+                <materialDesign:ColorZone DockPanel.Dock="Top"
+                                  Mode="PrimaryMid">
+                    <DockPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <ToggleButton x:Name="MenuToggleButton"
+                            AutomationProperties.Name="HamburgerToggleButton"
+                            IsChecked="False"
+                            Style="{StaticResource MaterialDesignHamburgerToggleButton}" />
+                        </StackPanel>
+                    </DockPanel>
+                </materialDesign:ColorZone>
+                <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -78,4 +120,7 @@
         <TextBlock x:Name="tb_count" Grid.Row="8" FontSize="20" Grid.Column="3" HorizontalAlignment="Center" Visibility="Hidden"/>
 
     </Grid>
+            </DockPanel>
+        </materialDesign:DrawerHost>
+    </materialDesign:DialogHost>
 </Page>
