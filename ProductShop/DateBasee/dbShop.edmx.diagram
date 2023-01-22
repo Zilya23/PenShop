@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="45cfe749141949ea991dca62ee66808f" Name="Diagram1">
+        <EntityTypeShape EntityType="ShopZilya320Model.Client" Width="1.5" PointX="3" PointY="8.875" />
+        <EntityTypeShape EntityType="ShopZilya320Model.Company" Width="1.5" PointX="0.75" PointY="5.75" />
+        <EntityTypeShape EntityType="ShopZilya320Model.Order" Width="1.5" PointX="5.25" PointY="1.5" />
+        <EntityTypeShape EntityType="ShopZilya320Model.Product" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="ShopZilya320Model.sysdiagrams" Width="1.5" PointX="2.75" PointY="5.75" />
+        <EntityTypeShape EntityType="ShopZilya320Model.TypeClient" Width="1.5" PointX="0.75" PointY="10.75" />
+        <EntityTypeShape EntityType="ShopZilya320Model.TypePencil" Width="1.5" PointX="0.75" PointY="1.75" />
+        <EntityTypeShape EntityType="ShopZilya320Model.User" Width="1.5" PointX="0.75" PointY="8.25" />
+        <AssociationConnector Association="ShopZilya320Model.FK_Client_Gender" />
+        <AssociationConnector Association="ShopZilya320Model.FK_Client_User1" />
+        <AssociationConnector Association="ShopZilya320Model.FK_Order_Client2" />
+        <AssociationConnector Association="ShopZilya320Model.FK_Product_Company" />
+        <AssociationConnector Association="ShopZilya320Model.FK_Order_Product" />
+        <AssociationConnector Association="ShopZilya320Model.FK_Product_Unit" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

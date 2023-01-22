@@ -1,0 +1,45 @@
+﻿<Page x:Class="ProductShop.AddPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProductShop"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="btn_back" FontSize="20" Content="Назад" Grid.Column="0" Grid.Row="0" Height="30" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btn_back_Click"/>
+        <Button x:Name="btn_save" FontSize="20" Content="Сохранить" Grid.Column="3" Grid.Row="0" Height="30" Width="120" VerticalAlignment="Top" HorizontalAlignment="Right" Click="btn_save_Click"/>
+
+        <TextBlock Text="Название" Grid.Column="0" Grid.Row="2" FontSize="20"/>
+        <TextBlock Text="Описание" Grid.Column="0" Grid.Row="3" FontSize="20"/>
+        <TextBlock Text="Тип" Grid.Column="0" Grid.Row="4" FontSize="20"/>
+        <TextBlock Text="Компания" Grid.Column="0" Grid.Row="5" FontSize="20"/>
+
+        <TextBox x:Name="tb_name" Grid.Column="1" Grid.Row="2" PreviewTextInput="tb_name_PreviewTextInput" FontSize="20"/>
+        <TextBox x:Name="tb_description" Grid.Column="1" Grid.Row="3" PreviewTextInput="tb_name_PreviewTextInput" FontSize="20"/>
+        <ComboBox Name="cb_type" Grid.Column="1" Grid.Row="4" FontSize="20"/>
+        <ComboBox Name="cb_company" Grid.Column="1" Grid.Row="5" FontSize="20"/>
+
+        <Image x:Name="img_prod" Source="{Binding Photo}" Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="5" Margin="15"/>
+        <Button x:Name="btn_newphoto" FontSize="20" Content="Изменить фото" Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="6" HorizontalAlignment="Center" Width="200" Click="btn_newphoto_Click"/>
+    </Grid>
+</Page>
